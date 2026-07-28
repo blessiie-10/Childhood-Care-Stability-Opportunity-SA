@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="An interactive portfolio analysis of childhood care, stability and opportunity in South Africa using Statistics South Africa's General Household Survey 2025."
+    />
+    <meta name="theme-color" content="#fffafb" />
+    <title>Childhood Care, Stability and Opportunity in South Africa</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to the analysis</a>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Return to the top">
+        <span class="brand-mark" aria-hidden="true">CS</span>
+        <span>
+          <strong>Care &amp; Stability</strong>
+          <small>South Africa · 2025</small>
+        </span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#explore">Explore</a>
+        <a href="#context">Context</a>
+        <a href="#method">Method</a>
+        <a
+          class="nav-cta"
+          href="https://github.com/blessiie-10/Childhood-Care-Stability-Opportunity-SA"
+          target="_blank"
+          rel="noreferrer"
+        >
+          GitHub
+          <span aria-hidden="true">↗</span>
+        </a>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <section class="hero" id="top">
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <span class="eyebrow-dot" aria-hidden="true"></span>
+            Portfolio project 04 · GHS 2025
+          </p>
+          <h1>Care is context.<br /><em>Opportunity is the question.</em></h1>
+          <p class="hero-intro">
+            I explored how children’s living arrangements, household stability
+            and access to resources relate to education and wellbeing in South
+            Africa.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#explore">
+              Explore the findings
+              <span aria-hidden="true">↓</span>
+            </a>
+            <a
+              class="button button-secondary"
+              href="https://github.com/blessiie-10/Childhood-Care-Stability-Opportunity-SA"
+              target="_blank"
+              rel="noreferrer"
+            >
+              View the project
+              <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+          <p class="hero-note">
+            Living arrangements are not measures of care quality. The analysis
+            describes associations, not causes.
+          </p>
+        </div>
+
+        <aside class="hero-panel" aria-labelledby="distribution-title">
+          <div class="panel-heading">
+            <div>
+              <p class="overline">Children’s living arrangements</p>
+              <h2 id="distribution-title">A national picture</h2>
+            </div>
+            <span class="year-pill">2025</span>
+          </div>
+          <div class="distribution-list" id="distribution-chart"></div>
+          <div class="panel-footer">
+            <span>Weighted estimate</span>
+            <strong>21.1M children</strong>
+          </div>
+        </aside>
+
+        <div class="hero-orb hero-orb-pink" aria-hidden="true"></div>
+        <div class="hero-orb hero-orb-teal" aria-hidden="true"></div>
+      </section>
+
+      <section class="stat-strip" aria-label="Analysis overview">
+        <article>
+          <strong>22,608</strong>
+          <span>Children in the analytical sample</span>
+        </article>
+        <article>
+          <strong>4</strong>
+          <span>Observable living-arrangement groups</span>
+        </article>
+        <article>
+          <strong>6</strong>
+          <span>Education and household indicators</span>
+        </article>
+        <article>
+          <strong>GHS 2025</strong>
+          <span>Statistics South Africa, Version 1</span>
+        </article>
+      </section>
+
+      <section class="section story-section">
+        <div class="section-kicker">Why I built this</div>
+        <div class="story-grid">
+          <div>
+            <h2>A personal question, approached with care.</h2>
+          </div>
+          <div class="story-copy">
+            <p>
+              Growing up as a foster child made this project personal to me. I
+              saw children raised in different household circumstances face
+              very different levels of stability, support and opportunity.
+            </p>
+            <p>
+              I wanted to move beyond assumptions and compare measurable
+              outcomes across children living with both biological parents, a
+              mother only, a father only, or neither biological parent.
+            </p>
+          </div>
+          <aside class="principle-card">
+            <span class="principle-icon" aria-hidden="true">◎</span>
+            <p>Family structure is not destiny.</p>
+            <small>
+              The focus is on conditions around children—not ranking families.
+            </small>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section explorer-section" id="explore">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">Outcome explorer</p>
+            <h2>Compare what the survey shows.</h2>
+          </div>
+          <p>
+            Choose an indicator to compare weighted percentages across the four
+            living-arrangement groups.
+          </p>
+        </div>
+
+        <div
+          class="metric-tabs"
+          id="metric-tabs"
+          role="tablist"
+          aria-label="Choose an outcome"
+        ></div>
+
+        <div class="chart-card">
+          <div class="chart-card-header">
+            <div>
+              <p class="overline" id="chart-overline">Education</p>
+              <h3 id="chart-title">School attendance, ages 5–17</h3>
+              <p id="chart-description">
+                Percentage of children who were attending an educational
+                institution.
+              </p>
+            </div>
+            <div
+              class="mode-switch"
+              id="mode-switch"
+              role="group"
+              aria-label="Estimate type"
+            >
+              <button class="active" type="button" data-mode="observed">
+                Observed
+              </button>
+              <button type="button" data-mode="adjusted">Adjusted</button>
+            </div>
+          </div>
+
+          <div class="outcome-chart" id="outcome-chart"></div>
+          <div class="chart-scale" id="chart-scale" aria-hidden="true"></div>
+          <div class="chart-note" id="chart-note"></div>
+        </div>
+
+        <div class="insight-grid">
+          <article class="insight-card insight-pink">
+            <p class="overline">Education</p>
+            <strong>95.5%–97.5%</strong>
+            <p>
+              School attendance was high across every group, with a modest gap
+              in the observed estimates.
+            </p>
+          </article>
+          <article class="insight-card insight-teal">
+            <p class="overline">Household pressure</p>
+            <strong>About 2×</strong>
+            <p>
+              Food insufficiency was roughly twice as common outside
+              two-parent households in these estimates.
+            </p>
+          </article>
+          <article class="insight-card insight-white">
+            <p class="overline">Digital access</p>
+            <strong>8.8%–32.5%</strong>
+            <p>
+              Fixed internet access showed a wide resource gap across living
+              arrangements.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section context-section" id="context">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">Household context</p>
+            <h2>Look beyond the family label.</h2>
+          </div>
+          <p>
+            Select a group to see the surrounding household conditions that
+            help make the outcome differences more meaningful.
+          </p>
+        </div>
+
+        <div
+          class="arrangement-selector"
+          id="arrangement-selector"
+          role="tablist"
+          aria-label="Choose a living arrangement"
+        ></div>
+
+        <div class="context-dashboard">
+          <article class="context-summary">
+            <p class="overline">Selected group</p>
+            <h3 id="context-title">Mother only</h3>
+            <p id="context-copy"></p>
+            <div class="context-share">
+              <strong id="context-share-value">45.9%</strong>
+              <span>of children nationally</span>
+            </div>
+          </article>
+
+          <div class="context-metrics" id="context-metrics"></div>
+        </div>
+      </section>
+
+      <section class="section method-section" id="method">
+        <div class="method-card">
+          <div class="section-heading method-heading">
+            <div>
+              <p class="section-kicker">How the analysis works</p>
+              <h2>Reproducible, weighted and cautious.</h2>
+            </div>
+            <p>
+              The workflow joins person and household records, validates the
+              living-arrangement distribution and compares outcomes before and
+              after adjustment.
+            </p>
+          </div>
+
+          <ol class="method-steps">
+            <li>
+              <span>01</span>
+              <div>
+                <strong>Join</strong>
+                <p>Link person and household files using the survey key.</p>
+              </div>
+            </li>
+            <li>
+              <span>02</span>
+              <div>
+                <strong>Validate</strong>
+                <p>Check weighted groups against Stats SA’s 2025 baseline.</p>
+              </div>
+            </li>
+            <li>
+              <span>03</span>
+              <div>
+                <strong>Compare</strong>
+                <p>Estimate education, support and resource indicators.</p>
+              </div>
+            </li>
+            <li>
+              <span>04</span>
+              <div>
+                <strong>Adjust</strong>
+                <p>Account for selected demographic and household factors.</p>
+              </div>
+            </li>
+          </ol>
+
+          <div class="limits-grid">
+            <div>
+              <strong>What this project can show</strong>
+              <p>
+                Nationally weighted patterns and associations between living
+                arrangements, household context and selected outcomes.
+              </p>
+            </div>
+            <div>
+              <strong>What it cannot show</strong>
+              <p>
+                Causation, direct adoption status or a complete identification
+                of every child in foster care.
+              </p>
+            </div>
+          </div>
+
+          <div class="method-links">
+            <a
+              href="https://github.com/blessiie-10/Childhood-Care-Stability-Opportunity-SA/blob/main/docs/methodology.md"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Read the methodology <span aria-hidden="true">↗</span>
+            </a>
+            <a
+              href="https://github.com/blessiie-10/Childhood-Care-Stability-Opportunity-SA/tree/main/src"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Review the Python pipeline <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="closing-section">
+        <p class="section-kicker">The takeaway</p>
+        <blockquote>
+          “Children’s outcomes are shaped not only by who they live with, but
+          by the stability, resources and opportunities around them.”
+        </blockquote>
+        <p>
+          The strongest story in the data is not a ranking of families. It is a
+          reminder to examine the conditions that help children thrive.
+        </p>
+        <a
+          class="button button-primary"
+          href="https://github.com/blessiie-10/Childhood-Care-Stability-Opportunity-SA"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Explore the full project
+          <span aria-hidden="true">↗</span>
+        </a>
+      </section>
+    </main>
+
+    <footer>
+      <div>
+        <strong>Childhood Care, Stability and Opportunity</strong>
+        <span>Portfolio project by Blessing Singo</span>
+      </div>
+      <p>
+        Source:
+        <a
+          href="https://doi.org/10.25828/a4a6-p161"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Statistics South Africa, General Household Survey 2025, Version 1
+        </a>
+      </p>
+    </footer>
+  </body>
+</html>
