@@ -58,7 +58,7 @@ const metrics = {
   attendance: {
     tab: "School attendance",
     category: "Education",
-    title: "School attendance, ages 5–17",
+    title: "School attendance, ages 5-17",
     description:
       "Percentage of children who were attending an educational institution.",
     scale: 100,
