@@ -1,0 +1,28 @@
+theme,analysis_role,variable,file,known_coding_or_use,status,caution
+Identifiers,Join key,uqnr,Person and household,Household unique number,Confirmed,Validate uniqueness before merge
+Demographics,Filter,age,Person,Keep ages 0 to 17,Confirmed,Check missing and out-of-range values
+Demographics,Covariate,Sex,Person,Child sex/gender,Confirmed,Confirm labels in downloaded file
+Geography,Covariate,prov,Person and household,Province,Confirmed,Use person value after merge
+Geography,Covariate,geotype,Person and household,Geography type,Confirmed,Confirm urban/rural labels
+Living arrangement,Exposure,hhc_moth_parthh,Person,"1 Yes; 2 No; 8 Not applicable",Confirmed,"For the published living-arrangement definition map 8 to not resident; co-residence is not care quality"
+Living arrangement,Exposure,hhc_fath_parthh,Person,"1 Yes; 2 No; 8 Not applicable",Confirmed,"For the published living-arrangement definition map 8 to not resident; co-residence is not care quality"
+Education,Outcome,edu_attend,Person,"1 Yes; 2 No; 3 Do not know; 8 Not applicable",Confirmed,Apply appropriate age universe
+Education,Outcome,edu_same,Person,"1 Yes; 2 No; 3 Do not know; 8 Not applicable; 9 Unspecified",Confirmed,Grade repetition not full achievement
+Education,Outcome,ecd_chldatt,Person,ECD facility attendance/type,Planned,Confirm age universe and category labels
+Education,Context,edu_food,Person,School feeding scheme,Planned,Confirm labels
+Health,Outcome,hlt_genhealth,Person,Self-reported health status,Planned,Proxy reporting possible
+Social protection,Context,soc_grant_csg,Person,Child support grant,Planned,Grant receipt is support access not outcome quality
+Social protection,Context,soc_grant_csg_topup,Person,Child support grant top-up,Planned,Confirm applicability
+Social protection,Context,soc_grant_fos,Person,"1 Yes; 2 No; 8 Not applicable",Confirmed,"Treat 8 as not receiving this grant when estimating receipt among all children; not a complete foster-care identifier"
+Food security,Outcome/context,fsd_hung_child,Household,"1 Never; 2 Seldom; 3 Sometimes; 4 Often; 5 Always; 6 Not applicable; 9 Unspecified",Confirmed,Define insufficiency as codes 2 to 5 among valid child households
+Food security,Context,fsd_worried,Household,Worried about food,Confirmed,Confirm response labels
+Food security,Context,fsd_healthy,Household,Lack of nutritious food,Confirmed,Confirm response labels
+Resources,Covariate,totmhinc,Household,Household income,Confirmed,Consider per-capita or equivalised income
+Resources,Covariate,hholdsz,Household,Household size,Confirmed,Use to derive per-capita income
+Resources,Covariate,hwl_assets_comp,Household,Computer desktop or laptop,Confirmed,Opportunity proxy
+Resources,Covariate,com_int_fixed,Household,Internet connection in household,Confirmed,Technology access proxy
+Early care,Descriptive,ECD_CARE_RELATION,Person,Main caregiver relationship,Confirmed,Only questionnaire-defined young-child universe
+Early care,Descriptive,ecd_read,Person,Read books or tell stories,Confirmed,Do not treat as overall care-quality score alone
+Early care,Descriptive,ECD_DISCIPLINE_SLAP,Person,Physical discipline item,Confirmed,Do not relabel as abuse without definition
+Weights,Weight,person_wgt,Person,Child-level survey weight,Confirmed,Required for national estimates
+Weights,Reference,house_wgt,Household,Household-level survey weight,Confirmed,Use only for household-level estimates

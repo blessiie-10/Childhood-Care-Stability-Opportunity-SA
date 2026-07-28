@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+.DS_Store
+.matplotlib-cache/
+
+data/raw/*
+!data/raw/README.md
+data/processed/*
+!data/processed/.gitkeep
+
+outputs/figures/*.png
+outputs/figures/*.pdf
+outputs/tables/*.csv

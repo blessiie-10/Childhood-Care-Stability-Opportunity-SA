@@ -1,0 +1,9 @@
+outcome,living_arrangement,observed_percent,adjusted_percent,sample_n,weighted_n
+"School attendance, ages 5-17",Both parents,97.51893105044796,97.17278119311436,4063,4591048.10378463
+"School attendance, ages 5-17",Mother only,96.98922086002669,97.12678439950074,7629,6820210.759636552
+"School attendance, ages 5-17",Father only,97.38250122671994,97.25965458843511,747,739738.426575043
+"School attendance, ages 5-17",Neither parent,95.47125321806081,95.81574694754346,4604,3221311.082060326
+"Grade repetition, applicable learners",Both parents,4.293371071740771,4.886439742659871,3757,4216654.603894946
+"Grade repetition, applicable learners",Mother only,5.257171889994072,5.197790285678689,7135,6371760.283211107
+"Grade repetition, applicable learners",Father only,5.063400533203435,4.598604624056647,698,692252.3723690519
+"Grade repetition, applicable learners",Neither parent,6.605628972836743,5.891926459555229,4269,2972365.531380725
